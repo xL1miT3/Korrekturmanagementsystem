@@ -1,0 +1,15 @@
+Wenn alle Frameworks installiert wurden, kann die Anwendung gerne gestartet werden.
+
+Mithilfe des Programms: https://sqlitebrowser.org/ kann die Datenbankdatei "Korrekturmanagementsystem.db" geöffnet, angeschaut und bearbeitet werden.
+Die Bearbeitung von den einzelnen Tabellen geschieht über SQL Code
+
+Für den Login stehen die Benutzer "tutor", "student" und "Tester" mit dem gleichnamigen Passwort zur Verfügung.
+Die Berechtigungen der Benutzer sind "tutor" = Tutor, "student" = Student und "Tester" = Admin.
+
+Um Fehler hinzufügen zu können, wurden die Kurs-ID's "Test_1" und "Test_2" hinzugefügt. Wenn ein Verbesserungsvorschlag oder Fehler hinzugefügt werden soll,
+muss die im GUI angegebene Kurs-ID mit einer der beiden Beispiele übereinstimmen. Gerne können auch selber Kurse hinzugefügt werden. Zu beachten ist jedoch,
+dass auch Benutzer diesen Kurs belegen müssen. Die neuen Kurse müssen also auch in der Tabelle belegte_Kurse angegeben werden.
+
+"tutor" belegt die Kurse "Test_1" und "Test_2"
+"student" belegt die Kurse "Test_1" und "Test_2"
+"Tester" belegt keinen Kurs

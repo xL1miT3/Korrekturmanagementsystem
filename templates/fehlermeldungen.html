@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <title>Fehlermeldungen</title>
+    </head>
+    <body>
+        <h1>Fehlermeldungen und Verbesserungsvorschläge</h1>
+            <form id="fehlermeldung_form" method="post">
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <label for="kurs">Kurs-ID:</label>
+                    </div>
+                    <div class="grid-item">
+                        <input class="kurs_input {% if kurs_error %}kurs_input_error{% endif %}" type="text" name="kurs" id="kurs" value="{% if kurs %}{{kurs}}{% endif %}">
+                    </div>
+
+                    <div class="grid-item">
+                        <label>Fehlerquelle: </label>
+                    </div>
+                    <select name="fehlerquelle" class="dropdown-select {% if fehlerquelle_error %}dropdown-select_error{% endif %}">
+                        <option value="auswahl">Bitte auswählen:</option>
+                        <option value="Lernskript">Lernskript</option>
+                        <option value="Lösungsheft">Lösungsheft</option>
+                        <option value="mycampus Fragen">myCampus Fragen</option>
+                        <option value="Musterklausuren">Musterklausuren</option>
+                        <option value="Literaturangaben">Literaturangaben</option>
+                        <option value="Foliensätze">Foliensätze</option>
+                        <option value="Vodcast">Vodcast</option>
+                        <option value="Tutorien">Tutorien</option>
+                        <option value="Audiocast">Audiocast</option>
+                        <option value="Weitere">Weitere</option>
+                    </select>
+                    <div class="grid-item">
+                        <label for="lektion">Lektion: </label>
+                    </div>
+                    <div class="grid-item">
+                        <input class="lektion {% if lektion_error %}lektion_error{% endif %}" type="text" name="lektion" id="lektion" value="{% if lektion %}{{lektion}}{% endif %}">
+                    </div>
+
+                    <div class="grid-item">
+                        <label>Art des Fehlers: </label>
+                    </div>
+                    <select name="fehlerart" class="dropdown-select {% if fehlerart_error %}dropdown-select_error{% endif %}">
+                        <option value="auswahl">Bitte auswählen:</option>
+                        <option value="Rechtschreibfehler">Rechtschreibfehler</option>
+                        <option value="Wissenschaftlicher Fehler">Wissenschaftlicher Fehler</option>
+                        <option value="Audio/Video Fehler">Audio/Video Fehler</option>
+                        <option value="Verbesserungsvorschlag">Verbesserungsvorschlag</option>
+                    </select>
+
+                    <div class="grid-item">
+                        <label for="pos_in">Position: </label>
+                    </div>
+                    <div class="grid-item">
+                        <input class="pos_in {% if pos_in_error %}pos_in_error{% endif %}" type="text" name="pos_in" id="pos_in" value="{% if pos_in %}{{pos_in}}{% endif %}">
+                    </div>
+
+                    <div class="grid-item">
+                        <label for="kommentar">Kommentar: </label>
+                    </div>
+                    <div class="grid-item">
+                        <div class="comment">
+                            <input class="kommentar {% if kommentar_error %}kommentar_error{% endif %}" type="text" name="kommentar" id="kommentar" value="{% if kommentar %}{{kommentar}}{% endif %}">
+                        </div>
+                    </div>
+                    <div class="grid-item"></div>
+                    <div class="grid-item"></div>
+                    <div class="grid-item"></div>
+                    <div class="grid-item"></div>
+                    <div class="grid-item">
+                        {% if berechtigt %}
+                        <button class="btn_tutorenansicht" name="btn_tutorenansicht">Tutorenansicht</button>
+                        {% endif %}
+                    </div>
+                    <div class="grid-item">
+                        <button class="btn_bestaetigen {% if error %}btn_error{% elif fehler_gespeichert %}btn_gespeichert{% endif %}" name="btn_bestaetigen">Hinzufügen</button>
+                    </div>
+                </div>
+
+            </form>
+    </body>
+</html>

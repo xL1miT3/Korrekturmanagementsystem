@@ -1,9 +1,42 @@
-Wenn alle Frameworks installiert wurden, kann die Anwendung gerne gestartet werden.
+Installation von Python:
+1. Download über den Link: https://www.python.org/downloads/
+2. Installation von Python
 
-Mithilfe des Programms: https://sqlitebrowser.org/ kann die Datenbankdatei "Korrekturmanagementsystem.db" geöffnet, angeschaut und bearbeitet werden.
-Die Bearbeitung von den einzelnen Tabellen geschieht über SQL Code
+Installation von PyCharm:
+1. Download über den Link: https://www.jetbrains.com/pycharm/
+2. Installation von PyCharm
 
-Für den Login stehen die Benutzer "tutor", "student" und "Tester" mit dem gleichnamigen Passwort zur Verfügung.
+Installation der Frameworks:
+1. öffnen der Eingabeaufforderung (CMD)
+2. ausführen von "pip install flask"
+3. wenn Flask erfolgreich installiert wurde, kann neuer Code eingegeben werden
+4. ausführen von "pip install sqlalchemy"
+
+Projekt mit PyCharm öffnen:
+1. öffnen von PyCharm
+3. folgende Anweisungen werden in PyCharm ausgeführt
+2. öffnen von Datei (oben links) -> Öffnen (Open) -> Korrekturmanagementsystem Ordner auswählen und mit "ok" bestätigen
+
+Frameworks in PyCharm Python hinzufügen:
+1. öffnen von Datei (oben links) -> Einstellungen -> Projekt: Korrekturmanagementsystem -> Python Interpreter -> installierte Python Version auswählen
+2. auf der gleichen Seite wie in Schritt 1 auf das "+" Symbol klicken
+3. bei der Eingabe flask suchen, anklicken und unten auf "Install Package"
+4. bei der Eingabe sqlalchemy suchen, anklicken und unten auf "Install Package"
+
+Wenn alle Frameworks installiert wurden, kann die main.py Anwendung gestartet werden.
+
+In der Konsole ist die URL http://127.0.0.1:5000 zu finden. Über das Einfügen dieser in einen Browser kann mit der Anwendung gearbeitet werden.
+
+Für den Login stehen folgende Benutzer und Passwörter zur Verfügung:
+1. Nutzername: tutor
+1. Passwort: tutor
+
+2. Nutzername: student
+2. Passwort: student
+
+3. Nutzername: Tester
+3. Passwort: Tester
+
 Die Berechtigungen der Benutzer sind "tutor" = Tutor, "student" = Student und "Tester" = Admin.
 
 Um Fehler hinzufügen zu können, wurden die Kurs-ID's "Test_1" und "Test_2" hinzugefügt. Wenn ein Verbesserungsvorschlag oder Fehler hinzugefügt werden soll,
@@ -13,3 +46,14 @@ dass auch Benutzer diesen Kurs belegen müssen. Die neuen Kurse müssen also auc
 "tutor" belegt die Kurse "Test_1" und "Test_2"
 "student" belegt die Kurse "Test_1" und "Test_2"
 "Tester" belegt keinen Kurs
+
+Die Möglichkeiten der Navigation in der Anwendung werden in dem Showcase Video dargestellt.
+
+Installation DB Browser for SQLite:
+1. öffnen der URL https://sqlitebrowser.org/dl/
+2. passenden Download für Mac oder Windows auswählen
+3. herunterladen
+4. Installation des Programms
+
+Mithilfe des Programms DB Browser for SQLite kann die Datenbankdatei "Korrekturmanagementsystem.db" geöffnet, angeschaut und bearbeitet werden.
+Die Bearbeitung von den einzelnen Tabellen kann über das Programm mithilfe von SQL Code geschehen.

@@ -1,0 +1,151 @@
+body {
+    background: linear-gradient(to top, rgba(30, 144, 255, .6), white);
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    padding: 50px;
+    text-decoration: underline;
+}
+
+label {
+    font-size: 22px;
+}
+
+button {
+    font-size: 18px;
+}
+
+input {
+    font-size: 18px;
+}
+
+#login_button {
+    text-align: center;
+    padding: 5px;
+    font-size: 22px;
+    width: 120px;
+    text-align: center;
+    background: black;
+    opacity: 0.9;
+    color: white;
+    border-radius: 15px;
+}
+
+#username {
+    height: 25px;
+    font-size: 22px;
+    width: 60%;
+    padding: 5px;
+}
+
+#password {
+    height: 25px;
+    font-size: 22px;
+    width: 60%;
+    padding: 5px;
+}
+
+#login_form {
+    width: 400px;
+    height: 250px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 80px;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 1px solid black;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    font_size: 20;
+}
+
+#fehlermeldung_form {
+    width: 550px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+}
+
+.grid-container {
+  display: grid;
+  column-gap: 50px;
+  text-align: center;
+  grid-template-columns: auto auto;
+  padding: 10px;
+  row-gap: 30px;
+}
+
+.grid-item input {
+    padding: 6px;
+    width: 95%;
+}
+
+.comment input {
+    height: 330%;
+    width: 95%;
+    padding: 6px;
+}
+
+.dropdown-select {
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 10px;
+    background: rgba(211,211,211, .3);
+    width: 101%;
+    width: 101%;
+
+}
+
+.dropdown-select option[value=auswahl] {
+    display: none;
+}
+
+.btn_bestaetigen {
+    background: white;
+    padding: 8px;
+    background: rgba(211,211,211, .4);
+}
+
+.btn_tutorenansicht {
+    background: white;
+    padding: 8px;
+    background: rgba(211,211,211, .4);
+}
+
+.btn_error {
+    border: 2px solid red;
+}
+
+.btn_gespeichert {
+    border: 3px solid #90EE90;
+}
+
+.kurs_input_error {
+    border: 1px solid red;
+}
+
+.lektion_error {
+    border: 1px solid red;
+}
+
+.pos_in_error {
+    border: 1px solid red;
+}
+
+.kommentar_error {
+    border: 1px solid red;
+}
+
+.dropdown-select_error {
+    border-color: red;
+}

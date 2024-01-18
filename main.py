@@ -115,6 +115,7 @@ class MyBlueprint(Blueprint):
         else:
             return render_template("login.html")
 
+    # Logik der Fehlermeldungen-Maske
     def fehlermeldungen(self):
         check = Check_error()
         render = render_template("fehlermeldungen.html", error=check.error, fehlerquelle_error=check.fehlerquelle_error,
@@ -168,6 +169,7 @@ class MyBlueprint(Blueprint):
         else:
             return render
 
+    # Logik der Tutorenansicht-Maske
     def tutor_ansicht(self):
         neue_fehler = []
         neue_fehler_sortiert = []
@@ -297,7 +299,7 @@ class Check_error:
                 if key == "Kommentar":
                     self.kommentar_error = True
 
-        # prüft, ob die Kurs ID in der DB existiert
+        # prüft, ob die Kurs-ID in der DB existiert
         kurs = Kurse.query.filter_by(kurs_abkuerzung=self.fehlermeldung["Kurs-ID"]).first()
 
         # wenn der Kurs None ist, gibt es die Abkürzung nicht in der DB

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>Fehlermeldungen und Verbesserungsvorschläge</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style_fehlerbehebung.css') }}">
+    </head>
+    <body>
+        <form id="form_id" method="POST">
+            <button class="zurueck" name="zurueck">Zurück</button>
+            <h1>Tutorenansicht zur Fehlerbehebung</h1>
+            <div class="row">
+                <div class="column">
+                    <h2>Unbearbeitet</h2>
+                    <ul>
+                        {% for item in neue_fehler %}
+                            <li><button name="auflistung" class="auflistung" value="{{ item }}">{{ item }}</button></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="column">
+                    <h2>In Bearbeitung</h2>
+                    <ul>
+                        {% for item in in_bearbeitung %}
+                            <li><button name="auflistung" class="auflistung" value="{{ item }}">{{ item }}</button></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="column">
+                    <h2>Abgeschlossen / Abgelehnt</h2>
+                    <ul>
+                        {% for item in abgeschlossen_oder_abgelehnt %}
+                            <li><button name="auflistung" class="auflistung" value="{{ item }}">{{ item }}</button></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% if modal_open %}
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <button class="close">&times;</button>
+                            <p>Fehler_ID: {{values[0]}}</p>
+                            <p>Kurs_ID: {{values[5]}}</p>
+                            <p>Fehlerquelle: {{values[1]}}</p>
+                            <p>Art des Fehlers: {{values[2]}}</p>
+                            <p>Position: {{values[3]}}</p>
+                            <p>Datum Erstellung: {{values[6]}}</p>
+                            {% if abgeschlossen %}
+                                <p>Datum Abschluss: {{values[7]}}</p>
+                            {% endif %}
+                            <p>Kommentar: {{values[4]}}</p>
+                            <select name="verschieben_nach" class="verschieben_nach">
+                                <option value="verschieben">Markieren als:</option>
+                                <option value="unbearbeitet">Unbearbeitet</option>
+                                <option value="wird_bearbeitet">In Bearbeitung</option>
+                                <option value="abgeschlossen">Abgeschlossen</option>
+                                <option value="abgelehnt">Abgelehnt</option>
+                            </select>
+                            <div class="verschieben">
+                                <button name="bestätigen" class="bestätigen">Bestätigen</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </form>
+    </body>
+</html>

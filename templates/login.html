@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <title>IU Login</title>
+    </head>
+    <body>
+        <h1>IU Korrekturmanagementsystem Login</h1>
+        <form id="login_form" method="post" style="text-align: center">
+            <label for="username">Benutzername </label><br><br>
+            <input type="text" id="username" name="username" placeholder="Benutzername"><br><br><br>
+            <label for="password">Passwort </label><br><br>
+            <input type="password" id="password" name="password" placeholder="Passwort"><br><br><br>
+            <div class="login_button">
+                <button type="submit" id="login_button" name="login_button">Login</button>
+                {% if login_error %}
+                    <p style="color:red">Benutzername und oder Passwort stimmen nicht</p>
+                {% endif %}
+            </div>
+        </form>
+    </body>
+</html>
